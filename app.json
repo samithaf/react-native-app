@@ -1,4 +1,16 @@
 {
   "name": "MyRNApp",
-  "displayName": "MyRNApp"
+  "displayName": "MyRNApp",
+  "expo": {
+    "name": "MyRNApp",
+    "slug": "MyRNApp",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
 }
