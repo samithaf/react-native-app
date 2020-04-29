@@ -15,17 +15,20 @@ import org.unimodules.adapters.react.ModuleRegistryAdapter;
 import org.unimodules.adapters.react.ReactModuleRegistryProvider;
 import expo.modules.updates.UpdatesController;
 
+import com.reactnativenavigation.NavigationApplication;
+import com.reactnativenavigation.react.NavigationReactNativeHost;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import javax.annotation.Nullable;
 
-public class MainApplication extends Application implements ReactApplication {
+public class MainApplication extends NavigationApplication {
     private final ReactModuleRegistryProvider mModuleRegistryProvider = new ReactModuleRegistryProvider(
             new BasePackageList().getPackageList(),
             null
     );
 
-    private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+    private final NavigationReactNativeHost mReactNativeHost = new NavigationReactNativeHost(this) {
         @Override
         public boolean getUseDeveloperSupport() {
             return BuildConfig.DEBUG;
@@ -69,12 +72,13 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     public void onCreate() {
-        super.onCreate();
-        if (!BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             UpdatesController.initialize(this);
         }
+        super.onCreate();
         SoLoader.init(this, /* native exopackage */ false);
         initializeFlipper(this, getReactNativeHost().getReactInstanceManager()); // Remove this line if you don't want Flipper enabled
+
     }
 
     /**

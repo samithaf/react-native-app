@@ -49,7 +49,7 @@ const App: () => React$Node = () => {
               <Image source={require('./assets/images/face_id/face_id.png')} />
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
+              <Text style={styles.sectionTitle}>See Your Changes..</Text>
               <Text style={styles.sectionDescription}>
                 <ReloadInstructions />
               </Text>
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     right: 0,
   },
   body: {
-    backgroundColor: Colors.dark,
+    backgroundColor: '#beed19',
   },
   sectionContainer: {
     marginTop: 32,
