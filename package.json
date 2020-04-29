@@ -9,8 +9,7 @@
     "test": "jest",
     "lint": "eslint .",
     "export": "rm -rf dist && expo export --public-url https://raw.githubusercontent.com/samithaf/expo-sample-app/master",
-    "android:build:debug": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
-    "android:build:release": "cd ./android && ./gradlew app:assembleRelease && ./gradlew installRelease"
+    "android:release": "cd ./android && ./gradlew app:assembleRelease && ./gradlew installRelease"
   },
   "dependencies": {
     "expo": "^37.0.8",
