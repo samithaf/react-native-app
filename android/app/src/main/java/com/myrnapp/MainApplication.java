@@ -13,6 +13,7 @@ import com.myrnapp.generated.BasePackageList;
 
 import org.unimodules.adapters.react.ModuleRegistryAdapter;
 import org.unimodules.adapters.react.ReactModuleRegistryProvider;
+
 import expo.modules.updates.UpdatesController;
 
 import com.reactnativenavigation.NavigationApplication;
@@ -20,7 +21,11 @@ import com.reactnativenavigation.react.NavigationReactNativeHost;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+
 import javax.annotation.Nullable;
+
+import com.appdynamics.eumagent.runtime.AgentConfiguration;
+import com.appdynamics.eumagent.runtime.Instrumentation;
 
 public class MainApplication extends NavigationApplication {
     private final ReactModuleRegistryProvider mModuleRegistryProvider = new ReactModuleRegistryProvider(
@@ -36,6 +41,11 @@ public class MainApplication extends NavigationApplication {
 
         @Override
         protected List<ReactPackage> getPackages() {
+            // initialize update controller here. Looks like its getting called internally and if initialize on onCreate throws a runtime error
+            // TODO. verify the flow
+            if (!BuildConfig.DEBUG) {
+                UpdatesController.initialize(getApplicationContext());
+            }
             List<ReactPackage> packages = new PackageList(this).getPackages();
             packages.add(new ModuleRegistryAdapter(mModuleRegistryProvider));
             return packages;
@@ -47,7 +57,8 @@ public class MainApplication extends NavigationApplication {
         }
 
         @Override
-        protected @Nullable String getJSBundleFile() {
+        protected @Nullable
+        String getJSBundleFile() {
             if (BuildConfig.DEBUG) {
                 return super.getJSBundleFile();
             } else {
@@ -56,7 +67,8 @@ public class MainApplication extends NavigationApplication {
         }
 
         @Override
-        protected @Nullable String getBundleAssetName() {
+        protected @Nullable
+        String getBundleAssetName() {
             if (BuildConfig.DEBUG) {
                 return super.getBundleAssetName();
             } else {
@@ -72,13 +84,14 @@ public class MainApplication extends NavigationApplication {
 
     @Override
     public void onCreate() {
-        if (BuildConfig.DEBUG) {
-            UpdatesController.initialize(this);
-        }
         super.onCreate();
         SoLoader.init(this, /* native exopackage */ false);
         initializeFlipper(this, getReactNativeHost().getReactInstanceManager()); // Remove this line if you don't want Flipper enabled
-
+        // Start the AppDynamics Instrumentation
+        Instrumentation.start(AgentConfiguration.builder()
+                .withContext(getApplicationContext())
+                .withAppKey("EUM-XXX-YYY")
+                .build());
     }
 
     /**
