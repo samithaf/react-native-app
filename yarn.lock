@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@appdynamics/react-native-agent@^20.3.1":
+  version "20.3.1"
+  resolved "https://registry.yarnpkg.com/@appdynamics/react-native-agent/-/react-native-agent-20.3.1.tgz#6fb2e6535f31783cbce94fbc5c1b614cac499914"
+  integrity sha512-xb0COJQwX/kmDrLOs3ZwJY4K3VS07hYkNyYUB+p53J3mADolGW1VCKzw47BIvdbXiF6iTZnBnpFyTHDuZXpZDA==
+  dependencies:
+    tslib "1.9.3"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"

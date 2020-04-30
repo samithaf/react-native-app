@@ -2,21 +2,6 @@ apply plugin: "com.android.application"
 
 import com.android.build.OutputFile
 
-buildscript {
-    repositories {
-        jcenter()
-    }
-
-    dependencies {
-        classpath 'com.appdynamics:appdynamics-gradle-plugin:20.3.1'
-    }
-}
-
-
-repositories {
-    jcenter()
-}
-
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
  * and bundleReleaseJsAndAssets).

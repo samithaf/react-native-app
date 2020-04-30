@@ -12,6 +12,7 @@
     "android:release": "cd ./android && ./gradlew clean app:assembleRelease && ./gradlew installRelease"
   },
   "dependencies": {
+    "@appdynamics/react-native-agent": "^20.3.1",
     "expo": "^37.0.8",
     "expo-asset": "^8.1.4",
     "expo-updates": "^0.1.2",
