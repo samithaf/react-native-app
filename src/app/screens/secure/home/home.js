@@ -9,10 +9,10 @@ const Home = () => {
 
     useEffect(() => {
         const assets = [];
-        Array.from({ length: 50 }, () => {
+        Array.from({ length: 50 }, (o, i) => {
             const asset = Assets.assets[~~(Assets.assets.length * Math.random())];
-            const id = {id: new Date().getTime()};
-            assets.push({...asset, id})
+            const id = `${i}`;
+            assets.push({...asset, id});
         });
 
         setShares(assets);
@@ -24,11 +24,7 @@ const Home = () => {
                 <ScrollView style={styles.scrollView}>
                     <Content style={styles.body}>
                         <Headline style={styles.headline}>shares</Headline>
-                        <FlatList
-                            data={shares}
-                            renderItem={({ item }) =><SharesCard {...item}/>}
-                            keyExtractor={item => item.id}
-                        />
+                        {shares.map(s => <SharesCard {...s} key={s.id}/>)}
                     </Content>
                 </ScrollView>
             </SafeAreaView>
