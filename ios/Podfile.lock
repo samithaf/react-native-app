@@ -1,4 +1,8 @@
 PODS:
+  - ADEUMReactNative (20.3.1):
+    - AppDynamicsAgent
+    - React
+  - AppDynamicsAgent (50.3.1771)
   - boost-for-react-native (1.63.0)
   - CocoaAsyncSocket (7.6.4)
   - CocoaLibEvent (1.0.0)
@@ -352,6 +356,7 @@ PODS:
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
+  - "ADEUMReactNative (from `../node_modules/@appdynamics/react-native-agent/ios/ADEUMReactNative.podspec`)"
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - EXConstants (from `../node_modules/expo-constants/ios`)
   - EXErrorRecovery (from `../node_modules/expo-error-recovery/ios`)
@@ -428,6 +433,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AppDynamicsAgent
     - boost-for-react-native
     - CocoaAsyncSocket
     - CocoaLibEvent
@@ -442,6 +448,8 @@ SPEC REPOS:
     - YogaKit
 
 EXTERNAL SOURCES:
+  ADEUMReactNative:
+    :path: "../node_modules/@appdynamics/react-native-agent/ios/ADEUMReactNative.podspec"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   EXConstants:
@@ -546,6 +554,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  ADEUMReactNative: 8acaffcaa749c268975475b6e1ca83456ba4438b
+  AppDynamicsAgent: c0b0bebe81ecf19c5309de131427f2acec5d144f
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
   CocoaLibEvent: 2fab71b8bd46dd33ddb959f7928ec5909f838e3f
@@ -610,6 +620,6 @@ SPEC CHECKSUMS:
   Yoga: 3ebccbdd559724312790e7742142d062476b698e
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 816bf1d6029b1ceb9876b32aed78065a9c9e33d4
+PODFILE CHECKSUM: af1e19f13a80eeb7ac85f2fcbaa4127958ba8eee
 
 COCOAPODS: 1.8.4

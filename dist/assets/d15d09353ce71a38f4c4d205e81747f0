@@ -1,0 +1,52 @@
+{
+  "assets": [
+    {
+      "code": "AMD",
+      "name": "Advanced Micro Devices Inc.",
+      "marketValue": 312321.55,
+      "shares": 1877,
+      "lastPrice": 345.45,
+      "updatedTime": "60MINS AGO"
+    },
+    {
+      "code": "LRCX",
+      "name": "Lam Research Corp.",
+      "marketValue": 4000.58,
+      "shares": 80,
+      "lastPrice": 30.45,
+      "updatedTime": "60MINS AGO"
+    },
+    {
+      "code": "MELI",
+      "name": "MercadoLibre Inc.",
+      "marketValue": 60000,
+      "shares": 800,
+      "lastPrice": 130.45,
+      "updatedTime": "60MINS AGO"
+    },
+    {
+      "code": "ASML",
+      "name": "ASML Holding NV ADR",
+      "marketValue": 58000,
+      "shares": 8010,
+      "lastPrice": 560.45,
+      "updatedTime": "60MINS AGO"
+    },
+    {
+      "code": "AAPL",
+      "name": "Apple Inc.",
+      "marketValue": 12000,
+      "shares": 210,
+      "lastPrice": 870.45,
+      "updatedTime": "60MINS AGO"
+    },
+    {
+      "code": "SWKS",
+      "name": "Skyworks Solutions Inc.",
+      "marketValue": 245000,
+      "shares": 4000,
+      "lastPrice": 542.45,
+      "updatedTime": "60MINS AGO"
+    }
+  ]
+}
