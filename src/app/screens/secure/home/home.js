@@ -1,10 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import { StyleSheet, ScrollView, SafeAreaView, FlatList } from 'react-native';
-import { Container, Content } from 'native-base';
-import {Headline, SharesCard} from '../../../components';
+import { StyleSheet } from 'react-native';
+import {Headline, AssetCard,ScrollLayout} from '../../../components';
 import Assets from '../../../../../mock/assets';
+import {Navigation} from 'react-native-navigation';
 
-const Home = () => {
+const MULTIPLIER = 1.15;
+const LONG_DURATION = 350 * MULTIPLIER;
+const SHORT_DURATION = 190 * MULTIPLIER;
+
+const Home = ({componentId}) => {
     const [shares, setShares] = useState([]);
 
     useEffect(() => {
@@ -18,36 +22,52 @@ const Home = () => {
         setShares(assets);
     }, []);
 
+    const onCardPress = (asset) => {
+        Navigation.push(componentId, {
+            component: {
+                name: 'secure.trading',
+                passProps: { ...asset },
+                options: {
+                    animations: {
+                        push: {
+                            content: {
+                                alpha: {
+                                    from: 0,
+                                    to: 1,
+                                    duration: LONG_DURATION
+                                }
+                            },
+                            elementTransitions: [
+
+                            ]
+                        },
+                        pop: {
+                            content: {
+                                alpha: {
+                                    from: 0,
+                                    to: 1,
+                                    duration: LONG_DURATION
+                                }
+                            },
+                            elementTransitions: [
+
+                            ]
+                        }
+                    }
+                }
+            }
+        });
+    };
+
     return (
-        <Container style={styles.container}>
-            <SafeAreaView style={styles.safeArea}>
-                <ScrollView style={styles.scrollView}>
-                    <Content style={styles.body}>
-                        <Headline style={styles.headline}>shares</Headline>
-                        {shares.map(s => <SharesCard {...s} key={s.id}/>)}
-                    </Content>
-                </ScrollView>
-            </SafeAreaView>
-        </Container>
+        <ScrollLayout>
+            <Headline style={styles.headline}>shares</Headline>
+            {shares.map(props => <AssetCard onCardPress={()=> onCardPress(props)} {...props} key={props.id}/>)}
+        </ScrollLayout>
     );
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'rgb(235, 239, 242)'
-    },
-    safeArea: {
-        flex: 1
-    },
-    scrollView: {
-        flex: 1,
-    },
-    body: {
-        flex: 1,
-        paddingLeft: 16,
-        paddingRight: 16
-    },
     headline: {
         marginBottom: 21,
         textTransform: 'uppercase',
