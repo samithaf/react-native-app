@@ -40,8 +40,24 @@ const Home = ({componentId}) => {
                                         duration: SHORT_DURATION
                                     }
                                 },
-                                sharedElementTransitions: [
+                                elementTransitions: [
+                                    {
+                                        id: 'ribbonContainer',
+                                        translationY: {
+                                            from: ribbonY,
+                                            duration: 1000
+                                        }
 
+                                    },
+                                    {
+                                        id: 'headerContainer',
+                                        alpha: {
+                                            from: 0,
+                                            to: 1,
+                                            duration: 1000
+                                        }
+
+                                    }
                                 ]
                             },
                             pop: {

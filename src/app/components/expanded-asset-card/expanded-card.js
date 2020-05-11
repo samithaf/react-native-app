@@ -1,4 +1,4 @@
-import React, {useRef, useLayoutEffect} from 'react';
+import React from 'react';
 import {View, StyleSheet, SafeAreaView, ScrollView, Image, Animated, Dimensions} from 'react-native';
 import {Title1, Callout} from '../typography/typography';
 import {AssetSnapshot} from '../asset-snapshot/asset-snapshot';
@@ -7,24 +7,6 @@ import {CloseButton} from '../close-button/close-button';
 const {width} = Dimensions.get('window');
 
 export const ExpandedAssetCard = (props) => {
-    const ribbonTopAnim = useRef(new Animated.Value(props.ribbonY)).current;
-    const fadeAnim = useRef(new Animated.Value(0)).current;
-
-    useLayoutEffect(() => {
-        Animated.timing(ribbonTopAnim, {
-            toValue: 195,
-            duration: 1000,
-            useNativeDriver: false
-        }).start();
-
-        Animated.timing(fadeAnim, {
-            toValue: 1,
-            duration: 1000,
-            useNativeDriver: false
-        }).start();
-
-    }, []);
-
     return (
         <>
             <SafeAreaView style={styles.top}/>
@@ -33,18 +15,18 @@ export const ExpandedAssetCard = (props) => {
                     <View style={styles.card}>
                         <CloseButton componentId={props.componentId}/>
                         <View style={styles.header}>
-                            <Animated.View style={[styles.ribbonContainer, {top: ribbonTopAnim}]}>
+                            <View style={[styles.ribbonContainer]} nativeID={'ribbonContainer'}>
                                 <View style={styles.ribbon}>
                                     <AssetSnapshot {...props}/>
                                 </View>
-                            </Animated.View>
-                            <Animated.View style={{opacity: fadeAnim}}>
+                            </View>
+                            <View nativeID={'headerContainer'}>
                                 <View style={[styles.chart]}>
                                     <Image source={require('../../../../assets/images/chart/chart.png')}/>
                                 </View>
                                 <Title1 style={[styles.title1]} nativeID={'code'}>{props.code}</Title1>
                                 <Callout style={[styles.callout]} nativeID={'name'}>{props.name}</Callout>
-                            </Animated.View>
+                            </View>
                         </View>
                         <View style={styles.body}>
                         </View>
@@ -79,6 +61,7 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         zIndex: 1,
+        top: 195
     },
     ribbon: {
         backgroundColor: 'white',
