@@ -6,7 +6,7 @@ import {Navigation} from 'react-native-navigation';
 
 const MULTIPLIER = 1.15;
 const LONG_DURATION = 350 * MULTIPLIER;
-const SHORT_DURATION = 190 * MULTIPLIER;
+const SHORT_DURATION = 100 * MULTIPLIER;
 
 const Home = ({componentId}) => {
     const [shares, setShares] = useState([]);
@@ -22,47 +22,48 @@ const Home = ({componentId}) => {
         setShares(assets);
     }, []);
 
-    const onCardPress = (asset) => {
-        Navigation.push(componentId, {
-            component: {
-                name: 'secure.trading',
-                passProps: { ...asset },
-                options: {
-                    animations: {
-                        push: {
-                            content: {
-                                alpha: {
-                                    from: 0,
-                                    to: 1,
-                                    duration: LONG_DURATION
-                                }
-                            },
-                            elementTransitions: [
+    const onCardPress = (elRef, asset) => {
+        elRef.current.measure((x, y, width, height, ribbonX, ribbonY) => {
+            const position = { width, height, ribbonX, ribbonY };
+            Navigation.push(componentId, {
+                component: {
+                    name: 'secure.trading',
+                    passProps: { ...asset, ...position },
+                    options: {
+                        animations: {
+                            push: {
+                                enabled: true,
+                                content: {
+                                    alpha: {
+                                        from: 0,
+                                        to: 1,
+                                        duration: SHORT_DURATION
+                                    }
+                                },
+                                sharedElementTransitions: [
 
-                            ]
-                        },
-                        pop: {
-                            content: {
-                                alpha: {
-                                    from: 0,
-                                    to: 1,
-                                    duration: LONG_DURATION
-                                }
+                                ]
                             },
-                            elementTransitions: [
-
-                            ]
+                            pop: {
+                                content: {
+                                    alpha: {
+                                        from: 0,
+                                        to: 1,
+                                        duration: SHORT_DURATION
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-            }
+            });
         });
     };
 
     return (
         <ScrollLayout>
             <Headline style={styles.headline}>shares</Headline>
-            {shares.map(props => <AssetCard onCardPress={()=> onCardPress(props)} {...props} key={props.id}/>)}
+            {shares.map(props => <AssetCard onCardPress={elRef => onCardPress(elRef, props)} {...props} key={props.id}/>)}
         </ScrollLayout>
     );
 };

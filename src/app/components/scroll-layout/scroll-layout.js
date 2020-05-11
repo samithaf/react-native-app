@@ -28,9 +28,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     body: {
-        flex: 1,
-        paddingLeft: 16,
-        paddingRight: 16
+        flex: 1
     },
     headline: {
         marginBottom: 21,

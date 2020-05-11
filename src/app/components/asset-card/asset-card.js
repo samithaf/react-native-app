@@ -1,20 +1,20 @@
-import React from 'react';
-import {View, TouchableOpacity, StyleSheet} from 'react-native';
+import React, {useRef, useState} from 'react';
+import {View, TouchableOpacity, StyleSheet, Dimensions} from 'react-native';
 import {AssetSnapshot} from '../asset-snapshot/asset-snapshot';
 import {Title1, Callout} from '../typography/typography';
 
 export const AssetCard = ({code, name, marketValue, updatedTime, lastPrice, shares, id, onCardPress}) => {
-
+    const elRef = useRef(null);
     const assetInfo = {marketValue, updatedTime, lastPrice, shares};
 
     return (
-        <TouchableOpacity style={styles.wrap} onPress={()=>onCardPress()}>
-            <View>
-                <View style={styles.header}>
+        <TouchableOpacity style={styles.wrap} onPress={()=>onCardPress(elRef)}>
+            <View style={styles.card}>
+                <View style={[styles.header]}>
                     <Title1 style={styles.title1} nativeID={`code`}>{code}</Title1>
                     <Callout style={styles.callout} nativeID={`name`}>{name}</Callout>
                 </View>
-                <View style={styles.body}>
+                <View style={styles.body} ref={elRef}>
                     <AssetSnapshot {...assetInfo}/>
                 </View>
             </View>
@@ -25,6 +25,10 @@ export const AssetCard = ({code, name, marketValue, updatedTime, lastPrice, shar
 const styles = StyleSheet.create({
     wrap: {
         marginBottom: 16
+    },
+    card: {
+        paddingLeft: 16,
+        paddingRight: 16
     },
     header: {
         backgroundColor: 'rgb(0,114,191)',
