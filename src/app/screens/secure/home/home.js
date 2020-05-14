@@ -23,8 +23,8 @@ const Home = ({componentId}) => {
     }, []);
 
     const onCardPress = (elRef, asset) => {
-        elRef.current.measure((x, y, width, height, ribbonX, ribbonY) => {
-            const position = { width, height, ribbonX, ribbonY };
+        elRef.current.measure((x, y, width, height, pageX, pageY) => {
+            const position = { width, height, pageX, pageY };
             Navigation.push(componentId, {
                 component: {
                     name: 'secure.trading',
@@ -39,28 +39,10 @@ const Home = ({componentId}) => {
                                         to: 1,
                                         duration: SHORT_DURATION
                                     }
-                                },
-                                elementTransitions: [
-                                    {
-                                        id: 'ribbonContainer',
-                                        translationY: {
-                                            from: ribbonY,
-                                            duration: 1000
-                                        }
-
-                                    },
-                                    {
-                                        id: 'headerContainer',
-                                        alpha: {
-                                            from: 0,
-                                            to: 1,
-                                            duration: 1000
-                                        }
-
-                                    }
-                                ]
+                                }
                             },
                             pop: {
+                                enabled: false,
                                 content: {
                                     alpha: {
                                         from: 0,

@@ -9,7 +9,8 @@
     "test": "jest",
     "lint": "eslint .",
     "export": "rm -rf dist && expo export --public-url https://raw.githubusercontent.com/samithaf/expo-sample-app/master",
-    "android:release": "cd ./android && ./gradlew clean app:assembleRelease && ./gradlew installRelease"
+    "android:release": "cd ./android && ./gradlew clean app:assembleRelease && ./gradlew installRelease",
+    "ios:test": "GYM_ARCHIVE_PATH=artifacts/test/archive GYM_OUTPUT_NAME=\"MyRNApp\" fastlane ios test"
   },
   "dependencies": {
     "@appdynamics/react-native-agent": "^20.3.1",

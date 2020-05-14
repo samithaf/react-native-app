@@ -7,41 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* MyRNAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MyRNAppTests.m */; };
+		00F0F4C54F27F3119E397856 /* libPods-MyRNApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEAE3F6C1EEC63C75BB65CA0 /* libPods-MyRNApp-tvOS.a */; };
+		0489F7C406CA4FE58BF5058F /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE48FE98A17A4F2CB4CE69A7 /* Fontisto.ttf */; };
 		0731D3B824204D62009CAE85 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0731D3B524204D62009CAE85 /* Expo.plist */; };
 		074F4BDC2432833400BDB9FE /* app.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07C2E6E4243282B30028AF0A /* app.bundle */; };
 		074F4BDD2432833400BDB9FE /* app.manifest in Resources */ = {isa = PBXBuildFile; fileRef = 07C2E6E3243282B30028AF0A /* app.manifest */; };
-		00E356F31AD99517003FC87E /* MyRNAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MyRNAppTests.m */; };
-		00F0F4C54F27F3119E397856 /* libPods-MyRNApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEAE3F6C1EEC63C75BB65CA0 /* libPods-MyRNApp-tvOS.a */; };
+		078BE806BB7845419AFAA7B0 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 838F3069C51741838181643D /* FontAwesome5_Brands.ttf */; };
+		0B823DA4E2A24452980A4DC8 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7646239B95F417FBDE12CFE /* Zocial.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		13F8B9806D2349CCBD8F645F /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA8631E41675425AB6FA8804 /* FontAwesome.ttf */; };
+		21D133F46209412BAB714CEA /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1DC38A878E14DB6B442A552 /* Feather.ttf */; };
+		2477223FF8274677A1408C71 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BC9A078D6C64F14AF5E44D8 /* MaterialCommunityIcons.ttf */; };
 		25AC574779FCE18599C2363E /* libPods-MyRNApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 357CB91BF5619ECD1242DD23 /* libPods-MyRNApp.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* MyRNAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MyRNAppTests.m */; };
-		C62FBCB151F0D3C63E1A4097 /* libPods-MyRNApp-MyRNAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E472B986B468E6C8EEB8CA /* libPods-MyRNApp-MyRNAppTests.a */; };
-		EF4435E90C1EBE1FAB617920 /* libPods-MyRNApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8428FE3AD514A0B1DA12438C /* libPods-MyRNApp-tvOSTests.a */; };
-		CF357F8188D84FB396B80F70 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ABE27EFB81A4972B135153E /* AntDesign.ttf */; };
-		BA453F52E24C4878B1C607F6 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D833D2C7A2434C8CADA6CFBB /* Entypo.ttf */; };
-		A89F3A5B88DF4F2E82F0FF06 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40963973FC8B40E0BAC51CD3 /* EvilIcons.ttf */; };
-		21D133F46209412BAB714CEA /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1DC38A878E14DB6B442A552 /* Feather.ttf */; };
-		13F8B9806D2349CCBD8F645F /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA8631E41675425AB6FA8804 /* FontAwesome.ttf */; };
-		078BE806BB7845419AFAA7B0 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 838F3069C51741838181643D /* FontAwesome5_Brands.ttf */; };
-		D32D4392AA0A47D7A914475D /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF3C7F6745E74C5BAC7B5651 /* FontAwesome5_Regular.ttf */; };
-		D893165783D64D679084318D /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6050A515E3A4D7BB2AC97D1 /* FontAwesome5_Solid.ttf */; };
-		0489F7C406CA4FE58BF5058F /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE48FE98A17A4F2CB4CE69A7 /* Fontisto.ttf */; };
-		D574855DE45B4E8BA3480CF6 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2378BEFD414BC0A6338E76 /* Foundation.ttf */; };
-		F32E7030FB1347549CB62739 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F2D4EC0C5848909ED26E51 /* Ionicons.ttf */; };
-		2477223FF8274677A1408C71 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BC9A078D6C64F14AF5E44D8 /* MaterialCommunityIcons.ttf */; };
 		4A64E91387F34338A1F1954F /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CAF1667240946BCAE535680 /* MaterialIcons.ttf */; };
+		5624284B95E5419F93DFF16E /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D4E0C557D14403E95489EF0 /* Roboto.ttf */; };
+		64D02E1C359949ABBA448CBB /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83475F76A8004DD3B2F6CCE5 /* SimpleLineIcons.ttf */; };
 		99BF88708D4C440896D024D7 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD8B4BA799004E66A41F7DEA /* Octicons.ttf */; };
 		A11EB468C7C84E528C8BC1B4 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6C4D937EE09497CBD68212F /* Roboto_medium.ttf */; };
-		5624284B95E5419F93DFF16E /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D4E0C557D14403E95489EF0 /* Roboto.ttf */; };
+		A89F3A5B88DF4F2E82F0FF06 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40963973FC8B40E0BAC51CD3 /* EvilIcons.ttf */; };
+		BA453F52E24C4878B1C607F6 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D833D2C7A2434C8CADA6CFBB /* Entypo.ttf */; };
+		C62FBCB151F0D3C63E1A4097 /* libPods-MyRNApp-MyRNAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E472B986B468E6C8EEB8CA /* libPods-MyRNApp-MyRNAppTests.a */; };
+		CF357F8188D84FB396B80F70 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ABE27EFB81A4972B135153E /* AntDesign.ttf */; };
+		D32D4392AA0A47D7A914475D /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF3C7F6745E74C5BAC7B5651 /* FontAwesome5_Regular.ttf */; };
+		D574855DE45B4E8BA3480CF6 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2378BEFD414BC0A6338E76 /* Foundation.ttf */; };
+		D893165783D64D679084318D /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6050A515E3A4D7BB2AC97D1 /* FontAwesome5_Solid.ttf */; };
 		DC5ED3BB68D343CDB69480C3 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F906D9CC784642FAB89FE234 /* rubicon-icon-font.ttf */; };
-		64D02E1C359949ABBA448CBB /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83475F76A8004DD3B2F6CCE5 /* SimpleLineIcons.ttf */; };
-		0B823DA4E2A24452980A4DC8 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7646239B95F417FBDE12CFE /* Zocial.ttf */; };
+		EF4435E90C1EBE1FAB617920 /* libPods-MyRNApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8428FE3AD514A0B1DA12438C /* libPods-MyRNApp-tvOSTests.a */; };
+		F32E7030FB1347549CB62739 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F2D4EC0C5848909ED26E51 /* Ionicons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +63,12 @@
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		0731D3B524204D62009CAE85 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Expo.plist; path = MyRNApp/Supporting/Expo.plist; sourceTree = "<group>"; };
-		07C2E6E3243282B30028AF0A /* app.manifest */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = app.manifest; path = "MyRNApp/Supporting/app.manifest"; sourceTree = "<group>"; };
-		07C2E6E4243282B30028AF0A /* app.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = app.bundle; path = "MyRNApp/Supporting/app.bundle"; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* MyRNAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRNAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* MyRNAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRNAppTests.m; sourceTree = "<group>"; };
+		0731D3B524204D62009CAE85 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Expo.plist; path = MyRNApp/Supporting/Expo.plist; sourceTree = "<group>"; };
+		07C2E6E3243282B30028AF0A /* app.manifest */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = app.manifest; path = MyRNApp/Supporting/app.manifest; sourceTree = "<group>"; };
+		07C2E6E4243282B30028AF0A /* app.bundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = app.bundle; path = MyRNApp/Supporting/app.bundle; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* MyRNApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRNApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MyRNApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MyRNApp/AppDelegate.m; sourceTree = "<group>"; };
@@ -78,39 +78,39 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MyRNApp/main.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* MyRNApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyRNApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* MyRNApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyRNApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33F2D4EC0C5848909ED26E51 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		34CC02B1A203F2D74FD6B872 /* Pods-MyRNApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRNApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-MyRNApp-tvOS/Pods-MyRNApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		357CB91BF5619ECD1242DD23 /* libPods-MyRNApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyRNApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CAF1667240946BCAE535680 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		3F2378BEFD414BC0A6338E76 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		40963973FC8B40E0BAC51CD3 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		4BC9A078D6C64F14AF5E44D8 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		5ABE27EFB81A4972B135153E /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		5EFDEB8D79A1433C1084F4CC /* Pods-MyRNApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRNApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-MyRNApp-tvOS/Pods-MyRNApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		83475F76A8004DD3B2F6CCE5 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		838F3069C51741838181643D /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		8428FE3AD514A0B1DA12438C /* libPods-MyRNApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyRNApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D4E0C557D14403E95489EF0 /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
 		9F90B3E516426F05401EE575 /* Pods-MyRNApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRNApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-MyRNApp-tvOSTests/Pods-MyRNApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		A6C4D937EE09497CBD68212F /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
+		AD8B4BA799004E66A41F7DEA /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		B506B44D28E80B9BA41E93D9 /* Pods-MyRNApp-MyRNAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRNApp-MyRNAppTests.release.xcconfig"; path = "Target Support Files/Pods-MyRNApp-MyRNAppTests/Pods-MyRNApp-MyRNAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		B7646239B95F417FBDE12CFE /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		BC9B3F46B4254CA750CA0C85 /* Pods-MyRNApp-MyRNAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRNApp-MyRNAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MyRNApp-MyRNAppTests/Pods-MyRNApp-MyRNAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA3586978BA7E03DB9CFB460 /* Pods-MyRNApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRNApp.debug.xcconfig"; path = "Target Support Files/Pods-MyRNApp/Pods-MyRNApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D13BACD5D669DE3B00311AF2 /* Pods-MyRNApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRNApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MyRNApp-tvOSTests/Pods-MyRNApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1DC38A878E14DB6B442A552 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		D833D2C7A2434C8CADA6CFBB /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		DA8631E41675425AB6FA8804 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		DEAE3F6C1EEC63C75BB65CA0 /* libPods-MyRNApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyRNApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3C7F6745E74C5BAC7B5651 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		E5E472B986B468E6C8EEB8CA /* libPods-MyRNApp-MyRNAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyRNApp-MyRNAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F6050A515E3A4D7BB2AC97D1 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		F906D9CC784642FAB89FE234 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		FB255C72071044F89B5C0674 /* Pods-MyRNApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRNApp.release.xcconfig"; path = "Target Support Files/Pods-MyRNApp/Pods-MyRNApp.release.xcconfig"; sourceTree = "<group>"; };
-		5ABE27EFB81A4972B135153E /* AntDesign.ttf */ = {isa = PBXFileReference; name = "AntDesign.ttf"; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D833D2C7A2434C8CADA6CFBB /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		40963973FC8B40E0BAC51CD3 /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D1DC38A878E14DB6B442A552 /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DA8631E41675425AB6FA8804 /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		838F3069C51741838181643D /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DF3C7F6745E74C5BAC7B5651 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F6050A515E3A4D7BB2AC97D1 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FE48FE98A17A4F2CB4CE69A7 /* Fontisto.ttf */ = {isa = PBXFileReference; name = "Fontisto.ttf"; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3F2378BEFD414BC0A6338E76 /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		33F2D4EC0C5848909ED26E51 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4BC9A078D6C64F14AF5E44D8 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3CAF1667240946BCAE535680 /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AD8B4BA799004E66A41F7DEA /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A6C4D937EE09497CBD68212F /* Roboto_medium.ttf */ = {isa = PBXFileReference; name = "Roboto_medium.ttf"; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9D4E0C557D14403E95489EF0 /* Roboto.ttf */ = {isa = PBXFileReference; name = "Roboto.ttf"; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F906D9CC784642FAB89FE234 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		83475F76A8004DD3B2F6CCE5 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B7646239B95F417FBDE12CFE /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FE48FE98A17A4F2CB4CE69A7 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +212,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6E361533476A4521AD2CDD16 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5ABE27EFB81A4972B135153E /* AntDesign.ttf */,
+				D833D2C7A2434C8CADA6CFBB /* Entypo.ttf */,
+				40963973FC8B40E0BAC51CD3 /* EvilIcons.ttf */,
+				D1DC38A878E14DB6B442A552 /* Feather.ttf */,
+				DA8631E41675425AB6FA8804 /* FontAwesome.ttf */,
+				838F3069C51741838181643D /* FontAwesome5_Brands.ttf */,
+				DF3C7F6745E74C5BAC7B5651 /* FontAwesome5_Regular.ttf */,
+				F6050A515E3A4D7BB2AC97D1 /* FontAwesome5_Solid.ttf */,
+				FE48FE98A17A4F2CB4CE69A7 /* Fontisto.ttf */,
+				3F2378BEFD414BC0A6338E76 /* Foundation.ttf */,
+				33F2D4EC0C5848909ED26E51 /* Ionicons.ttf */,
+				4BC9A078D6C64F14AF5E44D8 /* MaterialCommunityIcons.ttf */,
+				3CAF1667240946BCAE535680 /* MaterialIcons.ttf */,
+				AD8B4BA799004E66A41F7DEA /* Octicons.ttf */,
+				A6C4D937EE09497CBD68212F /* Roboto_medium.ttf */,
+				9D4E0C557D14403E95489EF0 /* Roboto.ttf */,
+				F906D9CC784642FAB89FE234 /* rubicon-icon-font.ttf */,
+				83475F76A8004DD3B2F6CCE5 /* SimpleLineIcons.ttf */,
+				B7646239B95F417FBDE12CFE /* Zocial.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,33 +272,6 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
-		};
-		6E361533476A4521AD2CDD16 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				5ABE27EFB81A4972B135153E /* AntDesign.ttf */,
-				D833D2C7A2434C8CADA6CFBB /* Entypo.ttf */,
-				40963973FC8B40E0BAC51CD3 /* EvilIcons.ttf */,
-				D1DC38A878E14DB6B442A552 /* Feather.ttf */,
-				DA8631E41675425AB6FA8804 /* FontAwesome.ttf */,
-				838F3069C51741838181643D /* FontAwesome5_Brands.ttf */,
-				DF3C7F6745E74C5BAC7B5651 /* FontAwesome5_Regular.ttf */,
-				F6050A515E3A4D7BB2AC97D1 /* FontAwesome5_Solid.ttf */,
-				FE48FE98A17A4F2CB4CE69A7 /* Fontisto.ttf */,
-				3F2378BEFD414BC0A6338E76 /* Foundation.ttf */,
-				33F2D4EC0C5848909ED26E51 /* Ionicons.ttf */,
-				4BC9A078D6C64F14AF5E44D8 /* MaterialCommunityIcons.ttf */,
-				3CAF1667240946BCAE535680 /* MaterialIcons.ttf */,
-				AD8B4BA799004E66A41F7DEA /* Octicons.ttf */,
-				A6C4D937EE09497CBD68212F /* Roboto_medium.ttf */,
-				9D4E0C557D14403E95489EF0 /* Roboto.ttf */,
-				F906D9CC784642FAB89FE234 /* rubicon-icon-font.ttf */,
-				83475F76A8004DD3B2F6CCE5 /* SimpleLineIcons.ttf */,
-				B7646239B95F417FBDE12CFE /* Zocial.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -364,18 +364,24 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = R29D7QAQ9W;
+						ProvisioningStyle = Manual;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = R29D7QAQ9W;
 						LastSwiftMigration = 1120;
+						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = R29D7QAQ9W;
+						ProvisioningStyle = Manual;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = R29D7QAQ9W;
+						ProvisioningStyle = Manual;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
 					};
 				};
@@ -682,6 +688,9 @@
 			baseConfigurationReference = BC9B3F46B4254CA750CA0C85 /* Pods-MyRNApp-MyRNAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: WESTPAC BANKING CORPORATION";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = R29D7QAQ9W;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -694,8 +703,10 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bt.panorama.enterprise.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a5ce7306-7cbf-4324-88ae-3cc153518faa";
+				PROVISIONING_PROFILE_SPECIFIER = "BT Panorama Enterprise Test Distribution";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyRNApp.app/MyRNApp";
 			};
 			name = Debug;
@@ -705,7 +716,10 @@
 			baseConfigurationReference = B506B44D28E80B9BA41E93D9 /* Pods-MyRNApp-MyRNAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: WESTPAC BANKING CORPORATION";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = R29D7QAQ9W;
 				INFOPLIST_FILE = MyRNAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -714,8 +728,10 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bt.panorama.enterprise.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a5ce7306-7cbf-4324-88ae-3cc153518faa";
+				PROVISIONING_PROFILE_SPECIFIER = "BT Panorama Enterprise Test Distribution";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyRNApp.app/MyRNApp";
 			};
 			name = Release;
@@ -726,7 +742,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: WESTPAC BANKING CORPORATION";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = R29D7QAQ9W;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -739,8 +758,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bt.panorama.enterprise.test;
 				PRODUCT_NAME = MyRNApp;
+				PROVISIONING_PROFILE = "a5ce7306-7cbf-4324-88ae-3cc153518faa";
+				PROVISIONING_PROFILE_SPECIFIER = "BT Panorama Enterprise Test Distribution";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -753,7 +774,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: WESTPAC BANKING CORPORATION";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = R29D7QAQ9W;
 				INFOPLIST_FILE = MyRNApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -761,8 +785,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bt.panorama.enterprise.test;
 				PRODUCT_NAME = MyRNApp;
+				PROVISIONING_PROFILE = "a5ce7306-7cbf-4324-88ae-3cc153518faa";
+				PROVISIONING_PROFILE_SPECIFIER = "BT Panorama Enterprise Test Distribution";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -778,7 +804,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: WESTPAC BANKING CORPORATION";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = R29D7QAQ9W;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "MyRNApp-tvOS/Info.plist";
@@ -788,8 +817,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.MyRNApp-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bt.panorama.enterprise.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a5ce7306-7cbf-4324-88ae-3cc153518faa";
+				PROVISIONING_PROFILE_SPECIFIER = "BT Panorama Enterprise Test Distribution";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
@@ -806,8 +837,11 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: WESTPAC BANKING CORPORATION";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = R29D7QAQ9W;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "MyRNApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -816,8 +850,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.MyRNApp-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bt.panorama.enterprise.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a5ce7306-7cbf-4324-88ae-3cc153518faa";
+				PROVISIONING_PROFILE_SPECIFIER = "BT Panorama Enterprise Test Distribution";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
@@ -833,7 +869,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: WESTPAC BANKING CORPORATION";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = R29D7QAQ9W;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "MyRNApp-tvOSTests/Info.plist";
@@ -843,8 +882,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.MyRNApp-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bt.panorama.enterprise.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a5ce7306-7cbf-4324-88ae-3cc153518faa";
+				PROVISIONING_PROFILE_SPECIFIER = "BT Panorama Enterprise Test Distribution";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyRNApp-tvOS.app/MyRNApp-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
@@ -860,8 +901,11 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: WESTPAC BANKING CORPORATION";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = R29D7QAQ9W;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "MyRNApp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -870,8 +914,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.MyRNApp-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bt.panorama.enterprise.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a5ce7306-7cbf-4324-88ae-3cc153518faa";
+				PROVISIONING_PROFILE_SPECIFIER = "BT Panorama Enterprise Test Distribution";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyRNApp-tvOS.app/MyRNApp-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;

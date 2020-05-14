@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<string>au.com.bt.panorama.enterprise.test</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -21,38 +21,71 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>3</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>btpanoramamockserverenv.m2atbyq34w.ap-southeast-2.elasticbeanstalk.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+			<key>d3jjhqujexdxuf.cloudfront.net</key>
+			<dict/>
+			<key>demo.panoramainvestor.com.au</key>
+			<dict/>
+			<key>dev1.panoramainvestor.srv.westpac.com.au</key>
+			<dict/>
+			<key>dev2.panoramainvestor.srv.westpac.com.au</key>
+			<dict/>
+			<key>dev3.panoramainvestor.srv.westpac.com.au</key>
+			<dict/>
+			<key>dev4.panoramainvestor.srv.westpac.com.au</key>
+			<dict/>
 			<key>localhost</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
 			</dict>
+			<key>pdf.reuters.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+			<key>research-bt-a2.markitqa.com</key>
+			<dict/>
+			<key>research-bt.markitqa.com</key>
+			<dict/>
+			<key>research.bt.markitondemand.com</key>
+			<dict/>
+			<key>sit1.panoramainvestor.com.au</key>
+			<dict/>
+			<key>sit3.panoramainvestor.com.au</key>
+			<dict/>
+			<key>svp.panoramainvestor.com.au</key>
+			<dict/>
+			<key>uat1.panoramainvestor.com.au</key>
+			<dict/>
+			<key>uat2.panoramainvestor.srv.westpac.com.au</key>
+			<dict/>
+			<key>www.bt.com.au</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+			<key>www.finnewsnetwork.com.au</key>
+			<dict/>
+			<key>www.morningstar.com.au</key>
+			<dict/>
+			<key>www.panoramainvestor.com.au</key>
+			<dict/>
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
@@ -75,5 +108,19 @@
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
 	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
