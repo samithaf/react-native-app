@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint .",
+    "lint": "./node_modules/.bin/eslint ./src",
+    "lint:fix": "./node_modules/.bin/eslint ./src --fix",
     "export": "rm -rf dist && expo export --public-url https://raw.githubusercontent.com/samithaf/expo-sample-app/master",
     "android:release": "cd ./android && ./gradlew clean app:assembleRelease && ./gradlew installRelease",
     "ios:test": "GYM_ARCHIVE_PATH=artifacts/test/archive GYM_OUTPUT_NAME=\"MyRNApp\" fastlane ios test"
