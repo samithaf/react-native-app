@@ -3,21 +3,35 @@ import {
   View,
   StyleSheet,
   SafeAreaView,
-  ScrollView,
-  Image,
   Animated,
   Dimensions,
   Easing,
+  Platform,
 } from 'react-native';
 import {Title1, Callout} from '..';
-import {AssetSnapshot} from '../asset-snapshot/asset-snapshot';
-import {CloseButton} from '../close-button/close-button';
 
 const {width} = Dimensions.get('window');
+
+const HEADER_MAX_HEIGHT = 270;
+const HEADER_MIN_HEIGHT = Platform.select({ios: 120, android: 100});
+const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
 
 export const ExpandedAssetCard = (props) => {
   const ribbonTopAnim = useRef(new Animated.Value(props.pageY)).current;
   const fadeAnim = useRef(new Animated.Value(0)).current;
+  const scrollY = useRef(new Animated.Value(0)).current;
+
+  const headerTranslate = scrollY.interpolate({
+    inputRange: [0, HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT],
+    outputRange: [0, -(HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT)],
+    extrapolate: 'clamp',
+  });
+
+  const imageOpacity = scrollY.interpolate({
+    inputRange: [0, HEADER_MAX_HEIGHT / 4],
+    outputRange: [1, 0],
+    extrapolate: 'clamp',
+  });
 
   useLayoutEffect(() => {
     Animated.timing(ribbonTopAnim, {
@@ -30,64 +44,74 @@ export const ExpandedAssetCard = (props) => {
     Animated.timing(fadeAnim, {
       toValue: 1,
       duration: 1000,
-      useNativeDriver: false,
+      useNativeDriver: true,
     }).start();
   }, []);
 
   return (
     <>
-      <SafeAreaView style={styles.top} />
       <SafeAreaView style={styles.container}>
-        <ScrollView bounces={false}>
-          <View style={styles.card}>
-            <CloseButton componentId={props.componentId} />
-            <View style={[styles.header]}>
-              <Animated.View
-                style={[styles.ribbonContainer, {top: ribbonTopAnim}]}
-                nativeID={'ribbonContainer'}>
-                <View style={styles.ribbon}>
-                  <AssetSnapshot {...props} />
-                </View>
-              </Animated.View>
-              <Animated.View
-                nativeID={'headerContainer'}
-                style={{opacity: fadeAnim}}>
-                <View style={[styles.chart]}>
-                  <Image
-                    source={require('../../../../assets/images/chart/chart.png')}
-                  />
-                </View>
-                <Title1 style={[styles.title1]} nativeID={'code'}>
-                  {props.code}
-                </Title1>
-                <Callout style={[styles.callout]} nativeID={'name'}>
-                  {props.name}
-                </Callout>
-              </Animated.View>
-            </View>
-            <View style={styles.bodyContainer}>
-              <View style={styles.body} />
-            </View>
+        <Animated.ScrollView
+          bounces={false}
+          onScroll={Animated.event(
+            [
+              {
+                nativeEvent: {
+                  contentOffset: {
+                    y: scrollY,
+                  },
+                },
+              },
+            ],
+            {useNativeDriver: false},
+          )}>
+          <View style={styles.bodyContainer}>
+            <View style={styles.body} />
           </View>
-        </ScrollView>
+        </Animated.ScrollView>
       </SafeAreaView>
+      <Animated.View
+        style={[styles.card, {transform: [{translateY: headerTranslate}]}]}
+        pointerEvents="none">
+        <View style={[styles.header]}>
+          <Animated.View
+            nativeID={'headerContainer'}
+            style={{opacity: fadeAnim}}>
+            <Animated.View style={[styles.chart]}>
+              <Animated.Image
+                style={{opacity: imageOpacity}}
+                source={require('../../../../assets/images/chart/chart.png')}
+              />
+            </Animated.View>
+            <Title1 style={[styles.title1]} nativeID={'code'}>
+              {props.code}
+            </Title1>
+            <Callout style={[styles.callout]} nativeID={'name'}>
+              {props.name}
+            </Callout>
+          </Animated.View>
+        </View>
+      </Animated.View>
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  top: {
-    backgroundColor: 'rgb(0, 114, 191)',
-    flex: 0,
-  },
   container: {
     backgroundColor: 'rgb(235, 239, 242)',
     flex: 1,
   },
   card: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: 'rgb(0, 114, 191)',
+    overflow: 'hidden',
+    height: HEADER_MAX_HEIGHT,
+    paddingTop: 80,
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: 'rgb(0, 114, 191)',
   },
   navBar: {
     backgroundColor: 'rgb(0, 114, 191)',
@@ -136,7 +160,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     backgroundColor: 'rgb(235, 239, 242)',
-    paddingTop: 65,
+    marginTop: HEADER_MAX_HEIGHT,
   },
   body: {
     backgroundColor: 'white',
@@ -144,7 +168,7 @@ const styles = StyleSheet.create({
     marginRight: 16,
     borderRadius: 10,
     width: width - 32,
-    height: 400,
+    height: 1400,
   },
   listItem: {
     flex: 0.33,

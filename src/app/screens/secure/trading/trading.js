@@ -3,7 +3,7 @@ import {ExpandedAssetCard} from '../../../components';
 import ScrollableHeader from '../../../components/scrollable-header/scrollable-header';
 
 export const Trading = (props) => {
-  return <ScrollableHeader {...props} />;
+  return <ExpandedAssetCard {...props} />;
 };
 
 export default Trading;
