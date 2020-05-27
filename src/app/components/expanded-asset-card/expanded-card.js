@@ -81,7 +81,7 @@ export const ExpandedAssetCard = (props) => {
                 },
               },
             ],
-            {useNativeDriver: false},
+            {useNativeDriver: true},
           )}>
           <View style={styles.bodyContainer}>
             <View style={styles.body} />

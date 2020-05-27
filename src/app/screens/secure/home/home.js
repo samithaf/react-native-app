@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet} from 'react-native';
-import {Headline, AssetCard, ScrollLayout} from '../../../components';
+import {Headline, AssetCard, ScrollLayout, Fab} from '../../../components';
 import Assets from '../../../../../mock/assets';
 import {Navigation} from 'react-native-navigation';
 
 const MULTIPLIER = 1.15;
-const LONG_DURATION = 350 * MULTIPLIER;
 const SHORT_DURATION = 100 * MULTIPLIER;
 
 const Home = ({componentId}) => {
@@ -59,16 +58,19 @@ const Home = ({componentId}) => {
   };
 
   return (
-    <ScrollLayout>
-      <Headline style={styles.headline}>shares</Headline>
-      {shares.map((props) => (
-        <AssetCard
-          onCardPress={(elRef) => onCardPress(elRef, props)}
-          {...props}
-          key={props.id}
-        />
-      ))}
-    </ScrollLayout>
+    <>
+      <ScrollLayout>
+        <Headline style={styles.headline}>shares</Headline>
+        {shares.map((props) => (
+          <AssetCard
+            onCardPress={(elRef) => onCardPress(elRef, props)}
+            {...props}
+            key={props.id}
+          />
+        ))}
+      </ScrollLayout>
+      <Fab />
+    </>
   );
 };
 
