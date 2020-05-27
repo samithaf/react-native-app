@@ -8,20 +8,21 @@ import {
   Easing,
   Platform,
 } from 'react-native';
-import {Title1, Callout} from '..';
+import {Title1, Callout, SubHead, Caption1} from '..';
 
 const {width} = Dimensions.get('window');
 
 const HEADER_MAX_HEIGHT = 270;
-const HEADER_MIN_HEIGHT = Platform.select({ios: 120, android: 100});
+const HEADER_MIN_HEIGHT = Platform.select({ios: 88, android: 68});
 const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
+const SAFE_AREA_TOP = Platform.select({ios: 44, android: 0});
 
 export const ExpandedAssetCard = (props) => {
   const ribbonTopAnim = useRef(new Animated.Value(props.pageY)).current;
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const scrollY = useRef(new Animated.Value(0)).current;
 
-  const headerTranslate = scrollY.interpolate({
+  const expandHeaderTranslate = scrollY.interpolate({
     inputRange: [0, HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT],
     outputRange: [0, -(HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT)],
     extrapolate: 'clamp',
@@ -30,6 +31,23 @@ export const ExpandedAssetCard = (props) => {
   const imageOpacity = scrollY.interpolate({
     inputRange: [0, HEADER_MAX_HEIGHT / 4],
     outputRange: [1, 0],
+    extrapolate: 'clamp',
+  });
+
+  const collapseHeaderOpacity = scrollY.interpolate({
+    inputRange: [0, HEADER_MIN_HEIGHT, HEADER_MIN_HEIGHT],
+    outputRange: [0, 0, 1],
+    extrapolate: 'clamp',
+  });
+
+  const collapseHeaderTextOpacity = scrollY.interpolate({
+    inputRange: [
+      0,
+      HEADER_MIN_HEIGHT,
+      HEADER_SCROLL_DISTANCE - 20,
+      HEADER_SCROLL_DISTANCE,
+    ],
+    outputRange: [0, 0, 0.1, 1],
     extrapolate: 'clamp',
   });
 
@@ -71,11 +89,14 @@ export const ExpandedAssetCard = (props) => {
         </Animated.ScrollView>
       </SafeAreaView>
       <Animated.View
-        style={[styles.card, {transform: [{translateY: headerTranslate}]}]}
+        style={[
+          styles.expandHeaderContainer,
+          {transform: [{translateY: expandHeaderTranslate}]},
+        ]}
         pointerEvents="none">
-        <View style={[styles.header]}>
+        <View style={[styles.expandHeader]}>
           <Animated.View
-            nativeID={'headerContainer'}
+            nativeID={'expandHeaderContainer'}
             style={{opacity: fadeAnim}}>
             <Animated.View style={[styles.chart]}>
               <Animated.Image
@@ -92,6 +113,20 @@ export const ExpandedAssetCard = (props) => {
           </Animated.View>
         </View>
       </Animated.View>
+      <Animated.View
+        style={[
+          styles.collapseHeaderContainer,
+          {opacity: collapseHeaderOpacity},
+        ]}>
+        <Animated.View
+          style={[
+            styles.collapseHeaderTextContainer,
+            {opacity: collapseHeaderTextOpacity},
+          ]}>
+          <SubHead style={[styles.subHead]}>{props.code}</SubHead>
+          <Caption1 style={[styles.caption1]}>{props.name}</Caption1>
+        </Animated.View>
+      </Animated.View>
     </>
   );
 };
@@ -101,7 +136,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(235, 239, 242)',
     flex: 1,
   },
-  card: {
+  expandHeaderContainer: {
     position: 'absolute',
     top: 0,
     left: 0,
@@ -113,30 +148,24 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
   },
-  navBar: {
-    backgroundColor: 'rgb(0, 114, 191)',
-  },
-  ribbonContainer: {
-    height: 90,
-    width: width - 32,
+  collapseHeaderContainer: {
     position: 'absolute',
+    top: 0,
     left: 0,
     right: 0,
-    zIndex: 1,
-  },
-  ribbon: {
-    backgroundColor: 'white',
-    height: '100%',
-    width: '100%',
-    marginLeft: 16,
-    marginRight: 16,
-    paddingTop: 24,
-    paddingBottom: 24,
-    borderRadius: 10,
+    overflow: 'hidden',
+    height: HEADER_MIN_HEIGHT,
+    backgroundColor: 'rgb(0, 114, 191)',
     flex: 1,
-    flexDirection: 'row',
   },
-  header: {
+  collapseHeaderTextContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: Platform.select({ios: 45, android: 15}),
+  },
+  expandHeader: {
     backgroundColor: 'rgb(0, 114, 191)',
     height: 240,
     paddingLeft: 32,
@@ -156,11 +185,23 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: '#fff',
   },
+  subHead: {
+    fontWeight: '500',
+    color: '#fff',
+  },
+  caption1: {
+    fontWeight: '500',
+    color: '#fff',
+  },
   bodyContainer: {
     flex: 1,
     flexDirection: 'row',
     backgroundColor: 'rgb(235, 239, 242)',
-    marginTop: HEADER_MAX_HEIGHT,
+    marginTop:
+      Platform.select({
+        ios: HEADER_MAX_HEIGHT - SAFE_AREA_TOP,
+        android: HEADER_MAX_HEIGHT,
+      }) + 20,
   },
   body: {
     backgroundColor: 'white',
