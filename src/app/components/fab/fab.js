@@ -16,7 +16,7 @@ const FabPanel = ({onClose}) => {
   const fabPanelTranslate = useRef(new Animated.Value(272)).current;
 
   useEffect(() => {
-    Animated.spring(fabPanelTranslate, {
+    Animated.timing(fabPanelTranslate, {
       toValue: 0,
       velocity: 3,
       tension: 2,
@@ -26,7 +26,7 @@ const FabPanel = ({onClose}) => {
   }, [fabPanelTranslate]);
 
   const close = () => {
-    Animated.spring(fabPanelTranslate, {
+    Animated.timing(fabPanelTranslate, {
       toValue: 272,
       velocity: 3,
       tension: 2,
