@@ -10,12 +10,24 @@ import {
 } from 'react-native';
 import {Title1, Callout, SubHead, Caption1} from '..';
 
-const {width} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 const HEADER_MAX_HEIGHT = 270;
 const HEADER_MIN_HEIGHT = Platform.select({ios: 88, android: 68});
 const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
 const SAFE_AREA_TOP = Platform.select({ios: 44, android: 0});
+
+const collapseHeaderTextContainerPaddingTop = () => {
+  let result = Platform.select({ios: 45, android: 15});
+  // adjustment to accomodate smaller devices (e.g. iPhone SE)
+  if (
+    (Platform.OS === 'ios' && height <= 667) ||
+    (Platform.OS === 'android' && height <= 700)
+  ) {
+    result -= 15;
+  }
+  return result;
+};
 
 export const ExpandedAssetCard = (props) => {
   const ribbonTopAnim = useRef(new Animated.Value(props.pageY)).current;
@@ -163,7 +175,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: Platform.select({ios: 45, android: 15}),
+    paddingTop: collapseHeaderTextContainerPaddingTop(),
   },
   expandHeader: {
     backgroundColor: 'rgb(0, 114, 191)',

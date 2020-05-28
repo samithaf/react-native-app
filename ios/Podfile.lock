@@ -4,8 +4,6 @@ PODS:
     - React
   - AppDynamicsAgent (50.3.1771)
   - boost-for-react-native (1.63.0)
-  - BVLinearGradient (2.5.6):
-    - React
   - CocoaAsyncSocket (7.6.4)
   - CocoaLibEvent (1.0.0)
   - DoubleConversion (1.1.6)
@@ -359,7 +357,6 @@ PODS:
 
 DEPENDENCIES:
   - "ADEUMReactNative (from `../node_modules/@appdynamics/react-native-agent/ios/ADEUMReactNative.podspec`)"
-  - BVLinearGradient (from `../node_modules/react-native-linear-gradient`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - EXConstants (from `../node_modules/expo-constants/ios`)
   - EXErrorRecovery (from `../node_modules/expo-error-recovery/ios`)
@@ -453,8 +450,6 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   ADEUMReactNative:
     :path: "../node_modules/@appdynamics/react-native-agent/ios/ADEUMReactNative.podspec"
-  BVLinearGradient:
-    :path: "../node_modules/react-native-linear-gradient"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   EXConstants:
@@ -562,7 +557,6 @@ SPEC CHECKSUMS:
   ADEUMReactNative: 8acaffcaa749c268975475b6e1ca83456ba4438b
   AppDynamicsAgent: c0b0bebe81ecf19c5309de131427f2acec5d144f
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
-  BVLinearGradient: e3aad03778a456d77928f594a649e96995f1c872
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
   CocoaLibEvent: 2fab71b8bd46dd33ddb959f7928ec5909f838e3f
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
@@ -628,4 +622,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: af1e19f13a80eeb7ac85f2fcbaa4127958ba8eee
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.2

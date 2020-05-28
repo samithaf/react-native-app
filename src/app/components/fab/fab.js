@@ -16,9 +16,7 @@ const FabPanel = ({onClose}) => {
   const fabPanelTranslate = useRef(new Animated.Value(272)).current;
   const backdropOpacity = useRef(new Animated.Value(0)).current;
   const animationDefaults = {
-    velocity: 3,
-    tension: 2,
-    friction: 8,
+    duration: 350,
   };
 
   useLayoutEffect(() => {
