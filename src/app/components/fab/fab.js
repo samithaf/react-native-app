@@ -7,49 +7,81 @@ import {
   Dimensions,
   View,
 } from 'react-native';
-import React, {useRef, useState, useEffect} from 'react';
+import React, {useRef, useState, useLayoutEffect} from 'react';
 import {Title3} from '..';
 
 const {width} = Dimensions.get('window');
 
 const FabPanel = ({onClose}) => {
   const fabPanelTranslate = useRef(new Animated.Value(272)).current;
+  const backdropOpacity = useRef(new Animated.Value(0)).current;
+  const animationDefaults = {
+    velocity: 3,
+    tension: 2,
+    friction: 8,
+  };
 
-  useEffect(() => {
-    Animated.timing(fabPanelTranslate, {
-      toValue: 0,
-      velocity: 3,
-      tension: 2,
-      friction: 8,
-      useNativeDriver: false,
-    }).start();
-  }, [fabPanelTranslate]);
+  useLayoutEffect(() => {
+    Animated.parallel([
+      Animated.timing(fabPanelTranslate, {
+        toValue: 0,
+        useNativeDriver: false,
+        ...animationDefaults,
+      }),
+      Animated.timing(backdropOpacity, {
+        toValue: 1,
+        useNativeDriver: true,
+        ...animationDefaults,
+      }),
+    ]).start();
+  }, [fabPanelTranslate, backdropOpacity, animationDefaults]);
 
   const close = () => {
-    Animated.timing(fabPanelTranslate, {
-      toValue: 272,
-      velocity: 3,
-      tension: 2,
-      friction: 8,
-      useNativeDriver: false,
-    }).start(() => {
-      onClose();
-    });
+    Animated.parallel([
+      Animated.timing(fabPanelTranslate, {
+        toValue: 272,
+        useNativeDriver: false,
+        ...animationDefaults,
+      }),
+      Animated.timing(backdropOpacity, {
+        toValue: 0,
+        useNativeDriver: true,
+        ...animationDefaults,
+      }),
+    ]).start(() => onClose());
   };
 
   return (
-    <Animated.View
-      style={[styles.fabPanel, {transform: [{translateY: fabPanelTranslate}]}]}>
-      <TouchableOpacity
-        activeOpacity={0.7}
-        style={styles.fabPanelCloseButton}
-        onPress={close}>
-        <Image source={require('../../../../assets/images/cross/cross.png')} />
-      </TouchableOpacity>
-      <View style={styles.fabPanelBody}>
-        <Title3>Preferences for this page</Title3>
-      </View>
-    </Animated.View>
+    <>
+      <Animated.View
+        onStartShouldSetResponder={close}
+        style={[
+          StyleSheet.absoluteFill,
+          styles.backdrop,
+          {opacity: backdropOpacity},
+        ]}
+      />
+      <Animated.View
+        style={[
+          styles.fabPanel,
+          {transform: [{translateY: fabPanelTranslate}]},
+        ]}>
+        <View style={styles.fabPanelHeader}>
+          <Title3 style={styles.fabPanelTitle}>
+            Preferences for this page
+          </Title3>
+          <TouchableOpacity
+            activeOpacity={0.7}
+            style={styles.fabPanelCloseButton}
+            onPress={close}>
+            <Image
+              source={require('../../../../assets/images/cross/cross.png')}
+            />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.fabPanelBody} />
+      </Animated.View>
+    </>
   );
 };
 
@@ -91,6 +123,15 @@ const styles = StyleSheet.create({
     left: 0,
     height: 272,
     backgroundColor: '#fff',
+    flex: 1,
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
+  },
+  fabPanelHeader: {
+    flexDirection: 'row',
+    display: 'flex',
+    height: 44,
+    marginTop: 5,
   },
   fabPanelCloseButton: {
     justifyContent: 'center',
@@ -98,11 +139,23 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     width: 44,
     height: 44,
-    marginRight: 20,
-    marginTop: 10,
+    marginRight: 16,
+  },
+  fabPanelTitle: {
+    paddingLeft: 16,
+    paddingRight: 16,
+    paddingTop: 10,
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontWeight: '600',
   },
   fabPanelBody: {
     paddingLeft: 32,
     paddingRight: 32,
+  },
+  backdrop: {
+    backgroundColor: 'rgba(0,0,0,.5)',
   },
 });
