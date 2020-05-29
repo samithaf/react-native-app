@@ -8,6 +8,7 @@ import {
   Easing,
   Platform,
 } from 'react-native';
+import {ScrollableTab, Tab, Tabs, List, Item, Text} from 'native-base';
 import {Title1, Callout, SubHead, Caption1} from '..';
 
 const {width, height} = Dimensions.get('window');
@@ -16,6 +17,14 @@ const HEADER_MAX_HEIGHT = 250;
 const HEADER_MIN_HEIGHT = Platform.select({ios: 88, android: 68});
 const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
 const SAFE_AREA_TOP = Platform.select({ios: 44, android: 0});
+const BG_COLOR = '#fff';
+const TAB_PROPS = {
+  tabStyle: {width: width / 3, backgroundColor: BG_COLOR},
+  activeTabStyle: {width: width / 3, backgroundColor: BG_COLOR},
+  textStyle: {color: 'rgb(91, 103, 112)', fontWeight: '500'},
+  activeTextStyle: {color: 'rgb(0, 123, 171)', fontWeight: '700'},
+  underlineStyle: {borderBottomWidth: 5},
+};
 
 const collapseHeaderTextContainerPaddingTop = () => {
   let result = Platform.select({ios: 45, android: 15});
@@ -36,7 +45,7 @@ const bodyContainerMarginTop = () => {
     (Platform.OS === 'ios' && height <= 568) ||
     (Platform.OS === 'android' && height <= 700)
       ? 40
-      : 20;
+      : 0;
 
   return (
     Platform.select({
@@ -53,6 +62,16 @@ const expandHeaderPaddingTop = () => {
     : 60;
 };
 
+const tabContent = (
+  <List>
+    {new Array(50).fill(null).map((_, i) => (
+      <Item key={i}>
+        <Text style={{paddingTop: 10, paddingBottom: 10}}>Item {i}</Text>
+      </Item>
+    ))}
+  </List>
+);
+
 export const ExpandedAssetCard = (props) => {
   const ribbonTopAnim = useRef(new Animated.Value(props.pageY)).current;
   const fadeAnim = useRef(new Animated.Value(0)).current;
@@ -63,6 +82,8 @@ export const ExpandedAssetCard = (props) => {
     outputRange: [0, -(HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT)],
     extrapolate: 'clamp',
   });
+
+  const tabBarTranslate = Animated.add(scrollY, expandHeaderTranslate);
 
   const imageOpacity = scrollY.interpolate({
     inputRange: [0, HEADER_MIN_HEIGHT / 3.5],
@@ -120,7 +141,33 @@ export const ExpandedAssetCard = (props) => {
             {useNativeDriver: true},
           )}>
           <View style={styles.bodyContainer}>
-            <View style={styles.body} />
+            <Tabs
+              renderTabBar={(props) => (
+                <Animated.View
+                  style={[
+                    {
+                      transform: [{translateY: tabBarTranslate}],
+                      zIndex: 1,
+                      width: width,
+                      backgroundColor: BG_COLOR,
+                    },
+                  ]}>
+                  <ScrollableTab
+                    {...props}
+                    underlineStyle={{backgroundColor: 'rgb(0, 123, 171)'}}
+                  />
+                </Animated.View>
+              )}>
+              <Tab heading="Buy" {...TAB_PROPS}>
+                {tabContent}
+              </Tab>
+              <Tab heading="Sell" {...TAB_PROPS}>
+                {tabContent}
+              </Tab>
+              <Tab heading="Details" {...TAB_PROPS}>
+                {tabContent}
+              </Tab>
+            </Tabs>
           </View>
         </Animated.ScrollView>
       </SafeAreaView>
@@ -169,7 +216,7 @@ export const ExpandedAssetCard = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'rgb(235, 239, 242)',
+    backgroundColor: BG_COLOR,
     flex: 1,
   },
   expandHeaderContainer: {
@@ -234,7 +281,6 @@ const styles = StyleSheet.create({
   bodyContainer: {
     flex: 1,
     flexDirection: 'row',
-    backgroundColor: 'rgb(235, 239, 242)',
     marginTop: bodyContainerMarginTop(),
   },
   body: {
