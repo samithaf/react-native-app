@@ -17,7 +17,10 @@ export const AssetCard = ({
   const assetInfo = {marketValue, updatedTime, lastPrice, shares};
 
   return (
-    <TouchableOpacity style={styles.wrap} onPress={() => onCardPress(elRef)}>
+    <TouchableOpacity
+      activeOpacity={0.8}
+      style={styles.wrap}
+      onPress={() => onCardPress(elRef)}>
       <View style={styles.card}>
         <View style={[styles.header]}>
           <Title1 style={styles.title1} nativeID={'code'}>

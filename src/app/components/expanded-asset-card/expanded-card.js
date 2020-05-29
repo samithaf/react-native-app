@@ -12,14 +12,14 @@ import {Title1, Callout, SubHead, Caption1} from '..';
 
 const {width, height} = Dimensions.get('window');
 
-const HEADER_MAX_HEIGHT = 270;
+const HEADER_MAX_HEIGHT = 250;
 const HEADER_MIN_HEIGHT = Platform.select({ios: 88, android: 68});
 const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
 const SAFE_AREA_TOP = Platform.select({ios: 44, android: 0});
 
 const collapseHeaderTextContainerPaddingTop = () => {
   let result = Platform.select({ios: 45, android: 15});
-  // adjustment to accomodate smaller devices (e.g. iPhone SE)
+  // adjustment to accomodate smaller devices (e.g. iPhone SE second gen)
   if (
     (Platform.OS === 'ios' && height <= 667) ||
     (Platform.OS === 'android' && height <= 700)
@@ -27,6 +27,30 @@ const collapseHeaderTextContainerPaddingTop = () => {
     result -= 15;
   }
   return result;
+};
+
+const bodyContainerMarginTop = () => {
+  //568
+  // adjustment to accomodate smaller devices (e.g. iPhone SE first gen)
+  const factor =
+    (Platform.OS === 'ios' && height <= 568) ||
+    (Platform.OS === 'android' && height <= 700)
+      ? 40
+      : 20;
+
+  return (
+    Platform.select({
+      ios: HEADER_MAX_HEIGHT - SAFE_AREA_TOP,
+      android: HEADER_MAX_HEIGHT,
+    }) + factor
+  );
+};
+
+const expandHeaderPaddingTop = () => {
+  return (Platform.OS === 'ios' && height <= 568) ||
+    (Platform.OS === 'android' && height <= 700)
+    ? 40
+    : 60;
 };
 
 export const ExpandedAssetCard = (props) => {
@@ -180,7 +204,7 @@ const styles = StyleSheet.create({
   },
   expandHeader: {
     backgroundColor: 'rgb(0, 114, 191)',
-    paddingTop: 80,
+    paddingTop: expandHeaderPaddingTop(),
     paddingLeft: 32,
     paddingRight: 32,
     position: 'relative',
@@ -211,11 +235,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     backgroundColor: 'rgb(235, 239, 242)',
-    marginTop:
-      Platform.select({
-        ios: HEADER_MAX_HEIGHT - SAFE_AREA_TOP,
-        android: HEADER_MAX_HEIGHT,
-      }) + 20,
+    marginTop: bodyContainerMarginTop(),
   },
   body: {
     backgroundColor: 'white',
