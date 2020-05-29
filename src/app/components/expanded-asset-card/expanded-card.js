@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import {ScrollableTab, Tab, Tabs, List, Item, Text} from 'native-base';
 import {Title1, Callout, SubHead, Caption1} from '..';
+import {CloseButton} from '../close-button/close-button';
 
 const {width, height} = Dimensions.get('window');
 
@@ -44,7 +45,7 @@ const bodyContainerMarginTop = () => {
   const factor =
     (Platform.OS === 'ios' && height <= 568) ||
     (Platform.OS === 'android' && height <= 700)
-      ? 40
+      ? 20
       : 0;
 
   return (
@@ -145,11 +146,9 @@ export const ExpandedAssetCard = (props) => {
               renderTabBar={(props) => (
                 <Animated.View
                   style={[
+                    styles.tabBar,
                     {
                       transform: [{translateY: tabBarTranslate}],
-                      zIndex: 1,
-                      width: width,
-                      backgroundColor: BG_COLOR,
                     },
                   ]}>
                   <ScrollableTab
@@ -159,13 +158,13 @@ export const ExpandedAssetCard = (props) => {
                 </Animated.View>
               )}>
               <Tab heading="Buy" {...TAB_PROPS}>
-                {tabContent}
+                <View style={styles.tabContent}>{tabContent}</View>
               </Tab>
               <Tab heading="Sell" {...TAB_PROPS}>
-                {tabContent}
+                <View style={styles.tabContent}>{tabContent}</View>
               </Tab>
               <Tab heading="Details" {...TAB_PROPS}>
-                {tabContent}
+                <View style={styles.tabContent}>{tabContent}</View>
               </Tab>
             </Tabs>
           </View>
@@ -210,6 +209,7 @@ export const ExpandedAssetCard = (props) => {
           <Caption1 style={[styles.caption1]}>{props.name}</Caption1>
         </Animated.View>
       </Animated.View>
+      <CloseButton componentId={props.componentId} />
     </>
   );
 };
@@ -293,5 +293,22 @@ const styles = StyleSheet.create({
   },
   listItem: {
     flex: 0.33,
+  },
+  tabBar: {
+    zIndex: 1,
+    width: width,
+    backgroundColor: BG_COLOR,
+    shadowColor: 'rgba(0,0,0,0.8)',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 6,
+  },
+  tabContent: {
+    marginRight: 24,
+    marginLeft: 24,
   },
 });

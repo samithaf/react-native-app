@@ -1,8 +1,15 @@
 import React from 'react';
-import {Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {
+  Dimensions,
+  Image,
+  Platform,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 import {Navigation} from 'react-native-navigation';
 
 import icon from '../../../../assets/images/cancel/cancel.png';
+const {height} = Dimensions.get('window');
 
 export const CloseButton = ({componentId}) => {
   const onPress = () => {
@@ -21,14 +28,18 @@ export const CloseButton = ({componentId}) => {
     </TouchableOpacity>
   );
 };
-
+const TOP =
+  (Platform.OS === 'ios' && height <= 568) ||
+  (Platform.OS === 'android' && height <= 700)
+    ? 30
+    : 55;
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignSelf: 'flex-end',
     width: 44,
     height: 44,
-    marginRight: 8,
+    position: 'absolute',
+    top: TOP,
+    right: 0,
+    zIndex: 10,
   },
 });
