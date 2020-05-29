@@ -63,15 +63,61 @@ const expandHeaderPaddingTop = () => {
     : 60;
 };
 
-const tabContent = (
-  <List>
-    {new Array(50).fill(null).map((_, i) => (
-      <Item key={i}>
-        <Text style={{paddingTop: 10, paddingBottom: 10}}>Item {i}</Text>
-      </Item>
-    ))}
-  </List>
-);
+const ThingsYouNeedToKnow = () => {
+  return (
+    <View
+      style={{
+        paddingRight: 24,
+        paddingTop: 24,
+        paddingLeft: 24,
+        paddingBottom: 24,
+        backgroundColor: 'rgb(235, 239, 242)',
+      }}>
+      <Text
+        style={{
+          fontSize: 13,
+          fontWeight: '600',
+          lineHeight: 18,
+          paddingBottom: 16,
+          color: 'rgb(91, 103, 112)',
+        }}>
+        Things you need to know
+      </Text>
+      <Text style={{fontSize: 13, paddingBottom: 10, lineHeight: 18, color: 'rgb(91, 103, 112)'}}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+        error sit voluptatem accusantium doloremque laudantium, totam rem
+      </Text>
+      <Text style={{fontSize: 13, lineHeight: 18, color: 'rgb(91, 103, 112)'}}>
+        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+        beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+        voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+        dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+        est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+      </Text>
+    </View>
+  );
+};
+
+const TabContent = () => {
+  return (
+    <>
+      <List style={styles.tabContent}>
+        {new Array(30).fill(null).map((_, i) => (
+          <Item key={i}>
+            <Text style={{paddingTop: 10, paddingBottom: 10}}>Item {i}</Text>
+          </Item>
+        ))}
+      </List>
+      <ThingsYouNeedToKnow />
+    </>
+  );
+};
 
 export const ExpandedAssetCard = (props) => {
   const ribbonTopAnim = useRef(new Animated.Value(props.pageY)).current;
@@ -158,13 +204,19 @@ export const ExpandedAssetCard = (props) => {
                 </Animated.View>
               )}>
               <Tab heading="Buy" {...TAB_PROPS}>
-                <View style={styles.tabContent}>{tabContent}</View>
+                <View>
+                  <TabContent />
+                </View>
               </Tab>
               <Tab heading="Sell" {...TAB_PROPS}>
-                <View style={styles.tabContent}>{tabContent}</View>
+                <View>
+                  <TabContent />
+                </View>
               </Tab>
               <Tab heading="Details" {...TAB_PROPS}>
-                <View style={styles.tabContent}>{tabContent}</View>
+                <View>
+                  <TabContent />
+                </View>
               </Tab>
             </Tabs>
           </View>
