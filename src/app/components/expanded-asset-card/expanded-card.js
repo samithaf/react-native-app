@@ -41,14 +41,14 @@ export const ExpandedAssetCard = (props) => {
   });
 
   const imageOpacity = scrollY.interpolate({
-    inputRange: [0, HEADER_MAX_HEIGHT / 4],
+    inputRange: [0, HEADER_MIN_HEIGHT / 3.5],
     outputRange: [1, 0],
     extrapolate: 'clamp',
   });
 
   const collapseHeaderOpacity = scrollY.interpolate({
-    inputRange: [0, HEADER_MIN_HEIGHT, HEADER_MIN_HEIGHT],
-    outputRange: [0, 0, 1],
+    inputRange: [0, HEADER_MIN_HEIGHT],
+    outputRange: [0, 1],
     extrapolate: 'clamp',
   });
 
@@ -156,9 +156,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(0, 114, 191)',
     overflow: 'hidden',
     height: HEADER_MAX_HEIGHT,
-    paddingTop: 80,
     flex: 1,
-    flexDirection: 'column',
+    display: 'flex',
+    zIndex: 1,
   },
   collapseHeaderContainer: {
     position: 'absolute',
@@ -169,6 +169,7 @@ const styles = StyleSheet.create({
     height: HEADER_MIN_HEIGHT,
     backgroundColor: 'rgb(0, 114, 191)',
     flex: 1,
+    zIndex: 2,
   },
   collapseHeaderTextContainer: {
     display: 'flex',
@@ -179,11 +180,12 @@ const styles = StyleSheet.create({
   },
   expandHeader: {
     backgroundColor: 'rgb(0, 114, 191)',
-    height: 240,
+    paddingTop: 80,
     paddingLeft: 32,
     paddingRight: 32,
     position: 'relative',
     zIndex: 1,
+    flex: 1,
   },
   chart: {
     height: 120,

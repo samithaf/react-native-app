@@ -98,12 +98,3 @@ target 'MyRNApp' do
     flipper_post_install(installer)
   end
 end
-
-target 'MyRNApp-tvOS' do
-  # Pods for MyRNApp-tvOS
-
-  target 'MyRNApp-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-end
