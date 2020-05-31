@@ -8,7 +8,15 @@ import {
   Easing,
   Platform,
 } from 'react-native';
-import {ScrollableTab, Tab, Tabs, List, Item, Text} from 'native-base';
+import {
+  ScrollableTab,
+  Tab,
+  Tabs,
+  List,
+  Item,
+  Text,
+  Container,
+} from 'native-base';
 import {Title1, Callout, SubHead, Caption1} from '..';
 import {CloseButton} from '../close-button/close-button';
 
@@ -83,7 +91,13 @@ const ThingsYouNeedToKnow = () => {
         }}>
         Things you need to know
       </Text>
-      <Text style={{fontSize: 13, paddingBottom: 10, lineHeight: 18, color: 'rgb(91, 103, 112)'}}>
+      <Text
+        style={{
+          fontSize: 13,
+          paddingBottom: 10,
+          lineHeight: 18,
+          color: 'rgb(91, 103, 112)',
+        }}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -145,13 +159,8 @@ export const ExpandedAssetCard = (props) => {
   });
 
   const collapseHeaderTextOpacity = scrollY.interpolate({
-    inputRange: [
-      0,
-      HEADER_MIN_HEIGHT,
-      HEADER_SCROLL_DISTANCE - 20,
-      HEADER_SCROLL_DISTANCE,
-    ],
-    outputRange: [0, 0, 0.1, 1],
+    inputRange: [HEADER_SCROLL_DISTANCE - 25, HEADER_SCROLL_DISTANCE - 20],
+    outputRange: [0, 1],
     extrapolate: 'clamp',
   });
 

@@ -28,18 +28,15 @@ export const CloseButton = ({componentId}) => {
     </TouchableOpacity>
   );
 };
-const TOP =
-  (Platform.OS === 'ios' && height <= 568) ||
-  (Platform.OS === 'android' && height <= 700)
-    ? 30
-    : 55;
 const styles = StyleSheet.create({
   container: {
-    width: 44,
-    height: 44,
+    height: 54,
+    width: 54,
+    alignItems: 'center',
+    justifyContent: 'center',
     position: 'absolute',
-    top: TOP,
-    right: 0,
+    top: Platform.select({ios: height <= 568 ? 20 : 30, android: 5}),
+    alignSelf: 'flex-end',
     zIndex: 10,
   },
 });
