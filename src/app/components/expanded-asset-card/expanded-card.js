@@ -1,4 +1,4 @@
-import React, {useLayoutEffect, useRef} from 'react';
+import React, {useLayoutEffect, useRef, useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -134,9 +134,11 @@ const TabContent = () => {
 };
 
 export const ExpandedAssetCard = (props) => {
+  const [scrollBegin, setScrollBegin] = useState(true);
   const ribbonTopAnim = useRef(new Animated.Value(props.pageY)).current;
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const scrollY = useRef(new Animated.Value(0)).current;
+  const tabBarShadowOpacity = useRef(new Animated.Value(0.27)).current;
 
   const expandHeaderTranslate = scrollY.interpolate({
     inputRange: [0, HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT],
@@ -177,13 +179,27 @@ export const ExpandedAssetCard = (props) => {
       duration: 1000,
       useNativeDriver: true,
     }).start();
-  }, []);
+
+    setScrollBegin(false);
+  }, [fadeAnim, ribbonTopAnim]);
+
+  useLayoutEffect(() => {
+    Animated.timing(tabBarShadowOpacity, {
+      toValue: scrollBegin ? 1 : 0,
+      duration: 240,
+      useNativeDriver: true,
+      easing: scrollBegin ? Easing.in(Easing.quad) : Easing.out(Easing.quad),
+    }).start();
+  }, [scrollBegin, tabBarShadowOpacity]);
 
   return (
     <>
       <SafeAreaView style={styles.container}>
         <Animated.ScrollView
           bounces={false}
+          scrollEventThrottle={4}
+          onMomentumScrollBegin={() => setScrollBegin(true)}
+          onMomentumScrollEnd={() => setScrollBegin(false)}
           onScroll={Animated.event(
             [
               {
@@ -204,6 +220,10 @@ export const ExpandedAssetCard = (props) => {
                     styles.tabBar,
                     {
                       transform: [{translateY: tabBarTranslate}],
+                    },
+                    scrollBegin ? styles.tabBarShadow : {},
+                    {
+                      shadowOpacity: tabBarShadowOpacity,
                     },
                   ]}>
                   <ScrollableTab
@@ -359,14 +379,16 @@ const styles = StyleSheet.create({
     zIndex: 1,
     width: width,
     backgroundColor: BG_COLOR,
-    shadowColor: 'rgba(0,0,0,0.8)',
+  },
+  tabBarShadow: {
+    shadowColor: 'rgba(0,0,0,0.08)',
     shadowOffset: {
       width: 0,
-      height: 3,
+      height: 8,
     },
-    shadowOpacity: 0.27,
-    shadowRadius: 4.65,
-    elevation: 6,
+    shadowRadius: 24,
+    shadowOpacity: 1,
+    elevation: 24,
   },
   tabContent: {
     marginRight: 24,
