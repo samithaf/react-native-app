@@ -29,6 +29,7 @@
 		A11EB468C7C84E528C8BC1B4 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6C4D937EE09497CBD68212F /* Roboto_medium.ttf */; };
 		A89F3A5B88DF4F2E82F0FF06 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40963973FC8B40E0BAC51CD3 /* EvilIcons.ttf */; };
 		BA453F52E24C4878B1C607F6 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D833D2C7A2434C8CADA6CFBB /* Entypo.ttf */; };
+		BD1FE514F0664F67BA5DCC20 /* HelveticaNeue-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 406609E43C3048D1ABC0AEC3 /* HelveticaNeue-Medium.ttf */; };
 		C62FBCB151F0D3C63E1A4097 /* libPods-MyRNApp-MyRNAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E472B986B468E6C8EEB8CA /* libPods-MyRNApp-MyRNAppTests.a */; };
 		CF357F8188D84FB396B80F70 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ABE27EFB81A4972B135153E /* AntDesign.ttf */; };
 		D32D4392AA0A47D7A914475D /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF3C7F6745E74C5BAC7B5651 /* FontAwesome5_Regular.ttf */; };
@@ -68,6 +69,7 @@
 		357CB91BF5619ECD1242DD23 /* libPods-MyRNApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyRNApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CAF1667240946BCAE535680 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		3F2378BEFD414BC0A6338E76 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		406609E43C3048D1ABC0AEC3 /* HelveticaNeue-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "HelveticaNeue-Medium.ttf"; path = "../assets/fonts/HelveticaNeue-Medium.ttf"; sourceTree = "<group>"; };
 		40963973FC8B40E0BAC51CD3 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		4BC9A078D6C64F14AF5E44D8 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		5ABE27EFB81A4972B135153E /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		13B07FAE1A68108700A75B9A /* MyRNApp */ = {
 			isa = PBXGroup;
 			children = (
+				565D4F522487B75100424A1E /* fonts */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -180,6 +183,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		565D4F522487B75100424A1E /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
 		6E361533476A4521AD2CDD16 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +212,7 @@
 				F906D9CC784642FAB89FE234 /* rubicon-icon-font.ttf */,
 				83475F76A8004DD3B2F6CCE5 /* SimpleLineIcons.ttf */,
 				B7646239B95F417FBDE12CFE /* Zocial.ttf */,
+				406609E43C3048D1ABC0AEC3 /* HelveticaNeue-Medium.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -356,6 +367,7 @@
 				DC5ED3BB68D343CDB69480C3 /* rubicon-icon-font.ttf in Resources */,
 				64D02E1C359949ABBA448CBB /* SimpleLineIcons.ttf in Resources */,
 				0B823DA4E2A24452980A4DC8 /* Zocial.ttf in Resources */,
+				BD1FE514F0664F67BA5DCC20 /* HelveticaNeue-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

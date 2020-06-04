@@ -1,8 +1,8 @@
 import React from 'react';
-import {ExpandedAssetCard} from '../../../components';
-import ScrollableHeader from '../../../components/scrollable-header/scrollable-header';
 
-export const Trading = (props) => {
+import {ExpandedAssetCard} from '../../../components';
+
+const Trading = (props) => {
   return <ExpandedAssetCard {...props} />;
 };
 

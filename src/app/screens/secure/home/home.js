@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet} from 'react-native';
+import {Navigation} from 'react-native-navigation';
 import {Headline, AssetCard, ScrollLayout, Fab} from '../../../components';
 import Assets from '../../../../../mock/assets';
-import {Navigation} from 'react-native-navigation';
 
 const MULTIPLIER = 1.15;
 const SHORT_DURATION = 100 * MULTIPLIER;
@@ -80,7 +80,16 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     color: 'rgb(91, 103, 112)',
     fontWeight: '500',
+    fontFamily: 'HelveticaNeue-Italic',
   },
 });
+
+Home.options = {
+  bottomTab: {
+    icon: require('../../../../../assets/images/tab_overview/tab_overview.png'),
+    selectedIcon: require('../../../../../assets/images/tab_overview/tab_overview_on.png'),
+    text: 'Overview',
+  },
+};
 
 export default Home;
