@@ -12,7 +12,7 @@
       android:allowBackup="false"
       android:theme="@style/AppTheme">
       <meta-data android:name="expo.modules.updates.EXPO_UPDATE_URL" android:value="https://raw.githubusercontent.com/samithaf/expo-sample-app/master/android-index.json" />
-      <meta-data android:name="expo.modules.updates.EXPO_SDK_VERSION" android:value="37.0.0" />
+      <meta-data android:name="expo.modules.updates.EXPO_SDK_VERSION" android:value="39.0.0" />
 
   <activity
     android:name=".MainActivity"

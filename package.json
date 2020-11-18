@@ -9,20 +9,20 @@
     "test": "jest",
     "lint": "./node_modules/.bin/eslint ./src",
     "lint:fix": "./node_modules/.bin/eslint ./src --fix",
-    "export": "rm -rf dist && expo export --public-url https://raw.githubusercontent.com/samithaf/expo-sample-app/master",
+    "export": "rm -rf dist && expo export --public-url https://raw.githubusercontent.com/samithaf/expo-sample-app/master --asset-url https://raw.githubusercontent.com/samithaf/expo-sample-app/master/assets",
     "android:release": "cd ./android && ./gradlew clean app:assembleRelease && ./gradlew installRelease",
     "ios:release": "ci/build-ios.sh"
   },
   "dependencies": {
-    "@appdynamics/react-native-agent": "^20.3.1",
-    "expo": "^37.0.8",
-    "expo-asset": "^8.1.4",
-    "expo-updates": "^0.1.2",
+    "expo": "^39.0.4",
+    "expo-asset": "^8.2.0",
+    "expo-updates": "^0.3.5",
     "native-base": "^2.13.12",
     "react": "16.11.0",
     "react-native": "0.62.2",
     "react-native-navigation": "^6.5.0",
-    "react-native-unimodules": "^0.9.0"
+    "react-native-unimodules": "^0.11.0",
+    "rn-fetch-blob": "^0.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

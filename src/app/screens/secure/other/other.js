@@ -1,9 +1,31 @@
 import React from 'react';
-import {Platform, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Alert,
+  Image,
+} from 'react-native';
 import {Navigation} from 'react-native-navigation';
 import {Title3} from '../../../components';
+import {downloadPDF} from '../../../services/download-pdf.utility';
+
+const tab_more = require('../../../../../assets/images/tab_more/tab_more.png');
+const annuity = require('../../../../../assets/images/annuity/icon-accountAnnuity.png');
 
 export const TransactionsScreen = ({componentId}) => {
+  const url = 'https://www.bt.com.au/content/dam/public/btfg-bt/documents/professional/support/pdf/pension_minimum_EOFY_for_clients.pdf';
+  const fileName = url.substring(url.lastIndexOf('/') + 1);
+
+  const downloadAlert = async () => {
+    try {
+      await downloadPDF(url, fileName);
+    } catch (e) {
+      Alert.alert(e.toString());
+    }
+  };
   const onPress = () => {
     Navigation.push(componentId, {
       component: {
@@ -24,6 +46,9 @@ export const TransactionsScreen = ({componentId}) => {
       <Text style={styles.text}>Transactions Screen</Text>
       <TouchableOpacity onPress={() => onPress()}>
         <Title3>Go to details</Title3>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => downloadAlert()}>
+        <Title3>Download a file</Title3>
       </TouchableOpacity>
     </View>
   );
@@ -104,7 +129,9 @@ AlertsScreen.options = {
 export const MoreScreen = () => {
   return (
     <View style={styles.root}>
-      <Text>More Screen</Text>
+      <Text>More Screen [expo update]</Text>
+      <Image source={tab_more} />
+      <Image source={annuity} />
     </View>
   );
 };
