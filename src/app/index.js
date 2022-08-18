@@ -12,7 +12,7 @@ const registerAppLaunchedListener = () => {
         titleDisplayMode: 'alwaysShow',
       },
       bottomTab: {
-        fontSize: 11,
+        fontSize: 12,
         textColor: 'rgb(91, 103, 112)',
         //selectedIconColor: 'rgb(0, 000, 171)',
         selectedTextColor: 'rgb(0, 123, 171)',
