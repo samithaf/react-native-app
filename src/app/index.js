@@ -13,7 +13,6 @@ const registerAppLaunchedListener = () => {
       },
       bottomTab: {
         fontSize: 10,
-        fontFamily: 'HelveticaNeue-Medium',
         textColor: 'rgb(91, 103, 112)',
         //selectedIconColor: 'rgb(0, 000, 171)',
         selectedTextColor: 'rgb(0, 123, 171)',
